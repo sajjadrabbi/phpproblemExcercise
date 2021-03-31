@@ -33,6 +33,4 @@
 
     //sample 6
     echo constant('LANGUAGE');
-
-
 ?>
