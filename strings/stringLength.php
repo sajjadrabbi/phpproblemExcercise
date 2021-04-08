@@ -17,6 +17,14 @@
         echo "$name is empty" . PHP_EOL;
     }
 
+    $name = "something";
+    if(strlen($name) > 0){
+        echo $name .PHP_EOL;
+    }else{
+        echo "$name is empty" . PHP_EOL;
+    }
+    
+
 
 
 ?>
