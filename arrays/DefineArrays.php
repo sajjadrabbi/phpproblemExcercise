@@ -53,7 +53,7 @@
     var_dump($arr);
     $arr[0] = "this is php";
     $arr[1] = true;
-    $arr[] = 7.5;
+    $arr[2] = 7.5;
     var_dump($arr);
 
     //store any data types in arrays
