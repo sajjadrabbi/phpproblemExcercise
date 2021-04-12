@@ -47,6 +47,22 @@
     }
 
 
+    //again
+    function divideee($x, $y):int {
+        if($y <= 0){
+            throw new Exception("Divide by zero exception might happen");
+        }
+        $result = $x / $y;
+        return $result;
+    }
+
+    try{
+
+        $result = divideee(6,0);
+        echo $result;
+    }catch(Exception $e){
+        echo "caught exception: " . $e->getmessage() . PHP_EOL;
+    }
 
 
 
