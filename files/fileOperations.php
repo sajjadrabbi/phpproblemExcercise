@@ -4,7 +4,7 @@
     $fileName = "Myfolder.txt";
 
 
-    if( file_exits($fileName)){
+    if( file_exists($fileName)){
         echo "File exists" . PHP_EOL;
 
         if(is_dir($fileName)){
