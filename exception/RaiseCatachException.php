@@ -16,7 +16,7 @@
         //executing the code which might give error
         //here i am runnning my code and also checking for errors
         $result = divide(8,0);
-        echo $result;
+        echo $result . PHP_EOL;
 
     }catch(Exception $e){
         //from the throw keyword, catch is accepts the exception
@@ -27,7 +27,24 @@
     //or not letting the other get executed
 
 
+    //again
+    function dividee($x, $y):int {
+        
+        if($result <= 0){
+            throw new Exception("Divide by zero exception might happen");
+        }
+        $result = $x / $y;
+        return $result;
+    };
 
+    try{
+        
+        $result = dividee(4,0);
+        echo $result;
+
+    }catch(Exception $e){
+        echo "caught exception: " . $e->getmessage() . PHP_EOL;
+    }
 
 
 
