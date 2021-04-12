@@ -18,9 +18,9 @@
         $result = divide(8,0);
         echo $result . PHP_EOL;
 
-    }catch(Exception $e){
+    }catch(Exception $exception){
         //from the throw keyword, catch is accepts the exception
-        echo "Caught Exception: " . $e->getmessage() .PHP_EOL;
+        echo "Caught Exception: " . $exception->getmessage() .PHP_EOL;
     }
 
     //now i can execute other line without the eroor getting in the way
@@ -42,8 +42,8 @@
         $result = dividee(4,0);
         echo $result;
 
-    }catch(Exception $e){
-        echo "caught exception: " . $e->getmessage() . PHP_EOL;
+    }catch(Exception $exception){
+        echo "caught exception: " . $exception->getmessage() . PHP_EOL;
     }
 
 
@@ -60,8 +60,8 @@
 
         $result = divideee(6,0);
         echo $result;
-    }catch(Exception $e){
-        echo "caught exception: " . $e->getmessage() . PHP_EOL;
+    }catch(Exception $exception){
+        echo "caught exception: " . $exception->getmessage() . PHP_EOL;
     }
 
 
