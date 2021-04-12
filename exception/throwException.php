@@ -1,6 +1,6 @@
 <?php
         declare(strict_types = 1);
-    //this function can be called neumarous times
+    //----------------------------
     function custom_exception_handler($exception){
         //2.getting the error it is then executed
         echo "Caught Exception: " . $exception->getmessage() . PHP_EOL;
@@ -17,7 +17,7 @@
     }
     
 
-
+    //--------------------------------------------
     function add(int $x, $y ):int {
 
         if( gettype($x) != "integer" || gettype($y) != "integer"){
