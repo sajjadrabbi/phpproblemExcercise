@@ -15,7 +15,8 @@
         $result = $x / $y;
         return $result;
     }
-    
+    set_exception_handler("custom_exception_handler");
+    echo divide(4, 0) . PHP_EOL;
 
     //--------------------------------------------
     function add(int $x, $y ):int {
@@ -28,11 +29,6 @@
 
     //telling the php that this now the new exception handler
     set_exception_handler("custom_exception_handler");
-
-    echo divide(4, 0) . PHP_EOL;
-
-
-    
     echo "this is also a value" . add(3,"4");
 
 
