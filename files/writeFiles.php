@@ -1,7 +1,7 @@
 <?php
 
     //open the file
-    $fileHandler = fopen("Newfile.txt", "w");
+    $fileHandler = fopen("NewFile.txt", "w");
 
 
     //write the content
@@ -11,7 +11,7 @@
     //save file
     fclose($fileHandler);
 
-    file_put_contents("Newfile.txt", "some more data append", FILE_APPEND);
+    file_put_contents("NewFile.txt", "some more data append", FILE_APPEND);
 
 
 
