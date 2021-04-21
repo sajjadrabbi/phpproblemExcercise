@@ -52,7 +52,7 @@
     //open file
     $fileHandler = fopen($fileName, "w") or die("Unable to Write the file");
     //read the content
-    fwrite($fileName, "This is now modified content");
+    fwrite($fileHandler, "This is now modified content");
     //file close
     fclose($fileHandler);
 
