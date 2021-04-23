@@ -28,3 +28,6 @@ class Files
 $files1 = new Files();
 $fileName = "Test.txt";
 $files1->displayContent($fileName);
+$files2 = new Files();
+$fileName2 = "Test1.txt";
+$files2->displayContent($fileName2);
