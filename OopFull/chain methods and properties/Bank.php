@@ -47,4 +47,5 @@ class Bank
 $bank1 = new Bank(101, "John, Smith");
 $bank1->depositAmount(500)->checkBalance();
 $bank1->deductAmount(100)->checkBalance();
-$bank1->deductAmount(1000)->checkBalance();
+$bank1->deductAmount(0)->checkBalance();
+echo $bank1->deductAmount(0)->checkBalance()->balance;
