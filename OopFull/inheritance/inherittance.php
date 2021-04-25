@@ -1,5 +1,5 @@
 <?php
-
+//university class as Parent
 class University
 {
     public $universityName = "Gargarion University";
@@ -9,7 +9,7 @@ class University
         echo "I am from $this->universityName." . PHP_EOL;
     }
 }
-
+//teacher class as child 
 class Teacher extends University
 {
     public $teacherName = "Kakashi Sensei";
