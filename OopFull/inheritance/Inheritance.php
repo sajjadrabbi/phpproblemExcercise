@@ -1,9 +1,9 @@
 <?php
 
 //this is Parent
-class University
+class Universityy
 {
-    public $universityName = "Boston University";
+    protected $universityName = "Boston University";
 
     function helloUniversity()
     {
@@ -12,14 +12,33 @@ class University
 }
 
 //this is Child
-class Teacher extends University
+class Teacherr extends Universityy
 {
-    public $teacherName;
+    public $teacherName = "Jane";
 
     function helloTeacher()
     {
         echo "Hello from $this->teacherName." . PHP_EOL;
     }
+
+    function getUniversityName(): string
+    {
+        return $this->universityName;
+    }
 }
 
-$teacher1 = new Teacher();
+class partTimeTeacherr extends Teacherr
+{
+    //    function getUniversityName(): string
+    //    {
+    //        return $this->universityName;
+    //    }
+}
+
+$teacher1 = new Teacherr();
+$teacher1->helloTeacher();
+$teacher1->helloUniversity();
+echo $teacher1->getUniversityName() . PHP_EOL;
+
+$partTeacher1 = new partTimeTeacherr();
+echo "This is from" . $partTeacher1->getUniversityName() . PHP_EOL;
