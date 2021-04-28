@@ -1,7 +1,5 @@
 <?php
 
-use Posts as GlobalPosts;
-
 class Posts
 {
     function __call($name, $arguments)
