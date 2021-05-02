@@ -20,10 +20,10 @@ class Lesson extends Course
 {
     public $lid;
 
-    function __construct($lid, Course $c)
+    function __construct($lid, Course $course1)
     {
         $this->lid = $lid;
-        $this->cid = $c->cid;
+        $this->cid = $course1->cid;
     }
     function showLessons()
     {
@@ -34,17 +34,22 @@ class Lesson extends Course
 class Quiz extends Course
 {
     public $qid;
-    function __construct($qid, Course $c)
+    function __construct($qid, Course $course1)
     {
         $this->qid = $qid;
-        $this->cid = $c->cid;
+        $this->cid = $course1->cid;
     }
 }
 
 $course1 = new Course(5);
-//echo $course->cid;
+echo "This is from direct course " . $course1->cid . PHP_EOL;
 //$course->courseDetails();
-$lesson1 = new Lesson(100, $course1);
+$lesson1 = new Lesson(100, $course1); //object of a parent is passed
+//$lesson1->showLessons();
+//$lesson1->courseDetails();
+
+$lesson1->cid = 10;
+echo $lesson1->cid . PHP_EOL;
+echo $course1->cid . PHP_EOL;
+
 $lesson1->showLessons();
-$lesson1->courseDetails();
-echo $lesson1->cid;
