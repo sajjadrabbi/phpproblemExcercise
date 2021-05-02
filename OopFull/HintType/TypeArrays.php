@@ -5,12 +5,11 @@ declare(strict_types=1);
 class University
 {
     private $name;
-
     function getName(): string
     {
         return $this->name;
     }
-    function setName(string $name): void
+    function setName($name)
     {
         $this->name = $name;
     }
@@ -21,20 +20,19 @@ class Student extends University
     private $studentID = "";
     private $studentName = "";
 
-    function setDetails(array $students): void
+    function setDetails(array $student): void
     {
-        $this->studentID = $students['id'];
-        $this->studentName = $students['name'];
+        $this->studentID = $student["id"];
+        $this->studentName = $student["name"];
     }
 }
 
 $u = new University();
 $u->setName("Boston University");
-
-$s = new student();
-$students = [
-    'id' => 1,
-    'name' => 'jane'
+$s = new Student();
+$stud = [
+    "id" => "565",
+    "name" => "Jane"
 ];
-$s->setDetails($students);
+$s->setDetails($stud);
 var_dump($s);
